@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:fluttertest2/Page2.dart';
 
 import 'Page3.dart';
+import 'Page4.dart';
+import 'Page5.dart';
+import 'Page6.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               Navigator.push(context, MaterialPageRoute<void>(
                 builder: (BuildContext context) {
-                  return Page2();
+                  return Page6();
                 },
               ));
             },
