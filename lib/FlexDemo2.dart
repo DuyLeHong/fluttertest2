@@ -20,26 +20,27 @@ class FlexDemo2 extends StatelessWidget {
                   Flexible(
                     flex: 2,
                     child: Image.network(
-                        "https://images.pexels.com/photos/2253415/pexels-photo-2253415.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                      "https://images.pexels.com/photos/2253415/pexels-photo-2253415.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+
+                    ),
                   ),
-                  SizedBox(
-                    width: 8,
-                  ),
+                  SizedBox(width: 8),
                   Flexible(
                     flex: 3,
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          "Girl with face mask",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 25),
-                        ),
-                        Text(
-                          "Jeffrey Czum 123",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 18),
-                        )
-                      ],
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Girl with face mask",
+                            style: TextStyle(fontSize: 25),
+                          ),
+                          Text(
+                            "Jeffrey Czum 123",
+                            style: TextStyle(fontSize: 18),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -54,6 +55,7 @@ class FlexDemo2 extends StatelessWidget {
                   Flexible(
                     flex: 1,
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
                           "Young girl red coat",
@@ -83,7 +85,6 @@ class FlexDemo2 extends StatelessWidget {
               ),
               Flexible(
                   child: Row(
-                verticalDirection: VerticalDirection.up,
                 children: <Widget>[
                   Flexible(
                     flex: 2,
@@ -96,6 +97,7 @@ class FlexDemo2 extends StatelessWidget {
                   Flexible(
                     flex: 1,
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
                           "Running man",
