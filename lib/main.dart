@@ -1,6 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertest2/FlexDemo2.dart';
+import 'package:fluttertest2/FlexibleWidgetPage.dart';
+import 'package:fluttertest2/MediaQueryPage.dart';
 import 'package:fluttertest2/Page2.dart';
 
 import 'Page3.dart';
@@ -109,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               Navigator.push(context, MaterialPageRoute<void>(
                 builder: (BuildContext context) {
-                  return Page6();
+                  return FlexDemo2();
                 },
               ));
             },
@@ -174,6 +177,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text('Btn Pressed 20221')));
+
+                  Navigator.push(context, MaterialPageRoute<void>(
+                    builder: (BuildContext context) {
+                      return FlexibleWidgetPage();
+                    },
+                  ));
                 },
                 child: const Text('Enabled'),
               ),
