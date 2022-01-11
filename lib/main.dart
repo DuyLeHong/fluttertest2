@@ -5,6 +5,7 @@ import 'package:fluttertest2/FlexDemo2.dart';
 import 'package:fluttertest2/FlexibleWidgetPage.dart';
 import 'package:fluttertest2/MediaQueryPage.dart';
 import 'package:fluttertest2/Page2.dart';
+import 'package:fluttertest2/StackPage.dart';
 
 import 'Page3.dart';
 import 'Page4.dart';
@@ -34,6 +35,14 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+
+        dividerTheme: const DividerThemeData(
+          space: 20,
+          color: Colors.green,
+          indent: 20,
+          thickness: 2,
+          endIndent: 20
+        ),
       ),
       home: const MyHomePage(title123: 'Flutter Demo 20221'),
     );
@@ -180,7 +189,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   Navigator.push(context, MaterialPageRoute<void>(
                     builder: (BuildContext context) {
-                      return FlexibleWidgetPage();
+                      return StackPage();
                     },
                   ));
                 },
