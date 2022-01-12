@@ -6,15 +6,21 @@ import 'package:http/http.dart' as http;
 
 //Định nghĩa hàm lấy dữ liệu về nhớ sử dụng async await
 Future<List<Album>> fetchAlbum() async {
+  // final response =
+  //     await http.get(Uri.https('jsonplaceholder.typicode.com', '/albums/1'));
+
   final response =
-      await http.get(Uri.https('jsonplaceholder.typicode.com', '/albums/1'));
+      await http.get(Uri.https('jsonplaceholder.typicode.com', '/albums'));
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
     // then parse the JSON.
-    List<Album> list = <Album>[];
+    List<Album> list;
 
-    list.add(Album.fromJson(json.decode(response.body)));
+    //list.add(Album.fromJson(json.decode(response.body)));
+
+    list = (json.decode(response.body) as List).map((jsonObj) =>
+        Album.fromJson(jsonObj)).toList();
 
     return list; //Khởi tạo đối tượng Album từ JSON trả về
   } else {
@@ -88,7 +94,7 @@ class _MyAppState extends State<RestAPIApp> {
             //Truyền kết quả trả về của Album trong tương lai vào đây
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text((snapshot.data! as List<Album>).first.title);
+                return Text((snapshot.data! as List<Album>).elementAt(5).title);
               } else if (snapshot.hasError) {
                 return Text("${snapshot.error}");
               }
