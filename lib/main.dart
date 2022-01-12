@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertest2/FlexDemo2.dart';
 import 'package:fluttertest2/FlexibleWidgetPage.dart';
@@ -108,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: const Icon(Icons.add_alert),
             tooltip: 'Show Snackbar',
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute<void>(
+              Navigator.push(context, CupertinoPageRoute<void>(
                 builder: (BuildContext context) {
                   return Page3();
                 },
