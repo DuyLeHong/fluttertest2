@@ -30,6 +30,9 @@ dependencies:
   flutter:
     sdk: flutter
   http:
+  sqflite:
+  path:
+  url_launcher: ^6.0.18
 
 
   # The following adds the Cupertino Icons font to your application.
