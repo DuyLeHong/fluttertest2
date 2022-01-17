@@ -9,7 +9,7 @@ class Page2 extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Next page 2022'),
+          title: const Text('Next page 20221'),
         ),
         body: Center(
           child: Container(

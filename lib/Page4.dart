@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertest2/view/component/Page3.dart';
+//import 'package:fluttertest2/view/component/Page3.dart';
 
 class Page4 extends StatelessWidget {
   late final List<String> items;
@@ -27,6 +29,7 @@ class Page4 extends StatelessWidget {
                 },
               ),
             ),
+            //Page3(),
             Image.asset(
               'BulbOn.jpeg',
               width: 200,
