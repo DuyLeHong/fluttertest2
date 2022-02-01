@@ -6,21 +6,22 @@ class FlexDemo2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flexible Widget Page 2'),
+        title: const Text('Flex Demo - CodeFresher'),
       ),
       body: Container(
-        margin: EdgeInsets.all(8.0),
+        margin: EdgeInsets.all(16.0),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(
+
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Flexible(
                     flex: 2,
                     child: Image.network(
-                      "https://images.pexels.com/photos/2253415/pexels-photo-2253415.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                      "https://codefresher.vn/wp-content/uploads/2022/01/banner_2022_flutter-1024x1024.jpg",
 
                     ),
                   ),
@@ -32,11 +33,14 @@ class FlexDemo2 extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            "Girl with face mask",
+                            "Lập trình Flutter",
+                            textAlign: TextAlign.center,
                             style: TextStyle(fontSize: 25),
                           ),
+                          SizedBox(height: 8),
                           Text(
-                            "Jeffrey Czum 123",
+                            "Thực chiến dự án app mobile 2022",
+                            textAlign: TextAlign.center,
                             style: TextStyle(fontSize: 18),
                           )
                         ],
@@ -58,12 +62,13 @@ class FlexDemo2 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          "Young girl red coat",
+                          "Lập trình Android",
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 25),
                         ),
+                        SizedBox(height: 8),
                         Text(
-                          "Jaspereology",
+                          "Java + Kotlin",
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 18),
                         )
@@ -76,7 +81,7 @@ class FlexDemo2 extends StatelessWidget {
                   Flexible(
                     flex: 1,
                     child: Image.network(
-                        "https://images.pexels.com/photos/4026110/pexels-photo-4026110.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                        "https://codefresher.vn/wp-content/uploads/2022/01/banner_2022_android.jpg"),
                   )
                 ],
               )),
@@ -87,25 +92,26 @@ class FlexDemo2 extends StatelessWidget {
                   child: Row(
                 children: <Widget>[
                   Flexible(
-                    flex: 2,
+                    flex: 3,
                     child: Image.network(
-                        "https://images.pexels.com/photos/4048182/pexels-photo-4048182.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                        "https://codefresher.vn/wp-content/uploads/2021/06/banner-Java-core-03-1024x1024.png"),
                   ),
                   SizedBox(
                     width: 8,
                   ),
                   Flexible(
-                    flex: 1,
+                    flex: 2,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          "Running man",
+                          "Lập trình Java cơ bản",
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 25),
                         ),
+                        SizedBox(height: 8,),
                         Text(
-                          "Niko Twisty",
+                          "Cho người mới bắt đầu",
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 18),
                         )

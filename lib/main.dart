@@ -40,9 +40,9 @@ class MyApp extends StatelessWidget {
         dividerTheme: const DividerThemeData(
             space: 20,
             color: Colors.green,
-            indent: 20,
+            indent: 5,
             thickness: 2,
-            endIndent: 20),
+            endIndent: 5),
 
         // Define the default brightness and colors.
         //brightness: Brightness.dark,
