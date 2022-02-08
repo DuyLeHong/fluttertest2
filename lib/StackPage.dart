@@ -23,8 +23,9 @@ class StackPage extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   children: <Widget>[
                     Positioned(bottom: -20, child: CircleImage()),
+                    //CircleImage(),
                     Text(
-                      "Girl in black mask",
+                      "CodeFresher 2022",
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     )
                   ]),

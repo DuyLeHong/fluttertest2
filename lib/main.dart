@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(context, CupertinoPageRoute<void>(
                     builder: (BuildContext context) {
-                      return Page3();
+                      return Page4();
                     },
                   ));
                 },
@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute<void>(
                     builder: (BuildContext context) {
-                      return FlexDemo2();
+                      return Page6();
                     },
                   ));
                 },
