@@ -74,6 +74,36 @@ class MyStatelessWidget extends StatelessWidget {
                   width: 100,
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
+              Stack(
+                //alignment: Alignment.bottomCenter,
+                //overflow: Overflow.visible, // thu bo comment cho nay
+                children: <Widget>[
+                  Container(
+                    width: 150,
+                    height: 150,
+                    color: Colors.brown,
+                  ),
+                  Container(
+                    width: 120,
+                    height: 120,
+                    color: Colors.green,
+                  ),
+                  Positioned(
+                      bottom: -20,
+                      left: -20,
+                      child: Container(
+                        width: 80,
+                        height: 80,
+                        color: Colors.blueGrey,
+                      )),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
             ],
           ),
         ),
