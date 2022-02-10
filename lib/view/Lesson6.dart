@@ -29,13 +29,34 @@ class MyStatelessWidget extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[
-              Container(
-                color: Colors.blue,
-                height: 150,
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      color: Colors.deepOrangeAccent,
+                      height: 100,
+                    ),
+                  ),
+                  Container(
+                    color: Colors.green,
+                    height: 100,
+                    width: 50,
+                  ),
+                  Flexible(
+                    flex: 3,
+                    fit: FlexFit.tight,
+                    child: Container(
+                      color: Colors.deepOrangeAccent,
+                      height: 100,
+                      width: 10,
+                    ),
+                  ),
+                ],
               ),
               Flexible(
                 flex: 1,
-                //fit: FlexFit.tight, // thu bo comment cho nay
+                fit: FlexFit.tight, // thu bo comment cho nay
                 child: Container(
                   color: Colors.amber,
                   width: 100,
