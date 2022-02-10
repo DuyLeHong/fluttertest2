@@ -23,7 +23,7 @@ class MyStatelessWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Expanded Column Sample'),
+        title: const Text('Lesson 6 demo'),
       ),
       body: SafeArea(
         child: Center(
@@ -33,19 +33,21 @@ class MyStatelessWidget extends StatelessWidget {
                 color: Colors.blue,
                 height: 150,
               ),
-              Expanded(
+              Flexible(
                 flex: 1,
+                //fit: FlexFit.tight, // thu bo comment cho nay
                 child: Container(
                   color: Colors.amber,
                   width: 100,
+                  height: 150,
                 ),
               ),
               Container(
                 color: Colors.blue,
                 height: 120,
               ),
-              Expanded(
-                flex: 2,
+              Flexible(
+                flex: 1,
                 child: Container(
                   color: Colors.red,
                   width: 100,
