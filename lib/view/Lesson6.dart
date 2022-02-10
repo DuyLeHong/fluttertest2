@@ -92,8 +92,8 @@ class MyStatelessWidget extends StatelessWidget {
                     color: Colors.green,
                   ),
                   Positioned(
-                      bottom: -20,
-                      left: -20,
+                      bottom: 0,
+                      left: 35,
                       child: Container(
                         width: 80,
                         height: 80,
