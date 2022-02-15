@@ -38,10 +38,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
 
         dividerTheme: const DividerThemeData(
-            space: 20,
-            color: Colors.green,
+            space: 30,
+            color: Colors.red,
             indent: 5,
-            thickness: 2,
+            thickness: 12,
             endIndent: 5),
 
         // Define the default brightness and colors.
@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute<void>(
                     builder: (BuildContext context) {
-                      return Page6();
+                      return FlexDemo2();
                     },
                   ));
                 },

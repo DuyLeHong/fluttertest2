@@ -3,7 +3,26 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  static const String _title = 'MediaQueryPage';
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: _title,
+      home: MediaQueryPage(),
+    );
+  }
+}
+
 class MediaQueryPage extends StatelessWidget {
+
+  const MediaQueryPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
