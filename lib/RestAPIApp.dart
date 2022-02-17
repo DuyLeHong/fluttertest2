@@ -73,12 +73,11 @@ class _MyAppState extends State<RestAPIApp> {
   }
 
   @override
-  void initState() {
+  void initState () {
     super.initState();
     futureAlbum = fetchAlbum();
-    /* Nên gọi lệnh fetchAlbum ở đây để tránh gọi nhiều lần như so với
-    hàm build
-    */
+
+
   }
 
   @override
@@ -99,7 +98,7 @@ class _MyAppState extends State<RestAPIApp> {
           //   /*
           //     class FutureBuilder<T> extends StatefulWidget
           //     FutureBuilder là một generic class kế thừa StatefulWidget,
-          //     kiểu truyền vào kiểu dữ liệu JSON trả về trong tương lai
+          //     kiểu truyền vào kiểu dữ liệu trả về trong tương lai
           //   */
           //   future: futureAlbum,
           //   //Truyền kết quả trả về của Album trong tương lai vào đây
