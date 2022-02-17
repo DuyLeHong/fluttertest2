@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
       },
       onGenerateRoute: generateRoute,
       // generate router
-      onUnknownRoute: (settings) => MaterialPageRoute(
-        builder: (context) => const Text('Unknown route'),
-      ),
+      // onUnknownRoute: (settings) => MaterialPageRoute(
+      //   builder: (context) => const Text('Unknown route'),
+      // ),
     );
   }
 
@@ -99,7 +99,7 @@ class _ShopProductListScreenState extends State<ShopProductListScreen> {
                 setState(() {
                   if (result != null) {
                     items.add(result as ProductItem);
-                    items.sort((a, b) => b.name.compareTo(a.name));
+                    items.sort((a, b) => a.name.compareTo(b.name));
                   }
                 });
               },
@@ -120,13 +120,23 @@ class _ShopProductListScreenState extends State<ShopProductListScreen> {
                           Icons.edit,
                           color: Colors.purple,
                         ),
-                        onPressed: () {
+                        onPressed: () async {
                           // using generate router
-                          Navigator.pushNamed(
+                          //DuyLH - chuc nang update giao dien khi edit thanh cong 1 item
+                          final result = await Navigator.pushNamed(
                             context,
                             ShopProductUpdateScreen.routeName,
                             arguments: item,
                           );
+
+                          setState(() {
+                            if (result != null) {
+
+                              items[index] = (result as ProductItem);
+
+                              items.sort((a, b) => a.name.compareTo(b.name));
+                            }
+                          });
                         }),
                     IconButton(
                         icon: const Icon(

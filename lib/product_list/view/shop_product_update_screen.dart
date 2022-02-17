@@ -4,6 +4,7 @@ import 'package:fluttertest2/product_list/model/product_item.dart';
 class ShopProductUpdateScreen extends StatefulWidget {
   static const routeName = '/shop-product-update';
   final ProductItem? item;
+
   const ShopProductUpdateScreen({Key? key, this.item}) : super(key: key);
 
   @override
@@ -233,14 +234,15 @@ class _ShopProductUpdateScreenState extends State<ShopProductUpdateScreen> {
   void _saveForm() {
     if (_formKey.currentState?.validate() == true) {
       _formKey.currentState?.save();
-      Navigator.pop(
-          context,
-          ProductItem(
-              id: _initValues['id'].toString(),
-              name: _initValues['name'],
-              price: double.parse(_initValues['price']),
-              description: _initValues['description'],
-              image: _initValues['image']));
+
+      ProductItem data = ProductItem(
+          id: _initValues['id'].toString(),
+          name: _initValues['name'],
+          price: double.parse(_initValues['price']),
+          description: _initValues['description'],
+          image: _initValues['image']);
+
+      Navigator.pop(context, data);
     }
   }
 }
