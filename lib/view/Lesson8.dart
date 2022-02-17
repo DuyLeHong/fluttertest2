@@ -107,10 +107,12 @@ class _MyAppState extends State<MyApp> {
 
   FutureBuilder<Album> buildFutureBuilder() {
     return FutureBuilder<Album>(
-      future: _futureAlbum,
+      future: _futureAlbum, // dau vao: mot bien co dang Future<Album>
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return Text(snapshot.data!.title);
+          if (snapshot.data != null) {
+            return Text(snapshot.data!.title);
+          }
         } else if (snapshot.hasError) {
           return Text('${snapshot.error}');
         }
