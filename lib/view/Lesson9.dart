@@ -16,15 +16,17 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: FlatButton(
-          child: Text('show snackbar'),
-          color: Colors.pink,
-          onPressed: () {
-            // xử lý show snackbar khi click
-            final snackBar = SnackBar(content: Text('Nội dung text gì đó'));
-            Scaffold.of(context).showSnackBar(snackBar);
-          },
-        ),
+        child: Builder(builder: (BuildContext context) {
+          return FlatButton(
+            child: Text('show snackbar'),
+            color: Colors.pink,
+            onPressed: () {
+              // xử lý show snackbar khi click
+              final snackBar = SnackBar(content: Text('Nội dung text gì đó'));
+              Scaffold.of(context).showSnackBar(snackBar);
+            },
+          );
+        },),
       ),
     );
   }
