@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
 
     return Theme(
-        data: Theme.of(context).copyWith(accentColor: Colors.yellow),
+        data: Theme.of(context).copyWith(hintColor: Colors.yellow),
         child: Scaffold(
           appBar: AppBar(
             // Here we take the value from the MyHomePage object that was created by

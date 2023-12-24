@@ -19,13 +19,12 @@ class StackPage extends StatelessWidget {
               width: 300,
               height: 300,
               child: Stack(
-                  overflow: Overflow.clip,
-                  alignment: Alignment.bottomCenter,
+                  clipBehavior: Clip.hardEdge, alignment: Alignment.bottomCenter,
                   children: <Widget>[
                     Positioned(bottom: -20, child: CircleImage()),
                     //CircleImage(),
                     Text(
-                      "CodeFresher 2022",
+                      "CodeFresher 2024",
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     )
                   ]),
@@ -93,8 +92,7 @@ class DemoStack extends StatelessWidget {
         width: 140,
         height: 140,
         child: Stack(
-            alignment: this.alignmentDirectional,
-            overflow: Overflow.clip,
+            clipBehavior: Clip.hardEdge, alignment: this.alignmentDirectional,
             children: <Widget>[
               ColorBox(140, 140, Colors.amberAccent),
               ColorBox(110, 110, Colors.blueAccent),

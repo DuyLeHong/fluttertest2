@@ -61,8 +61,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - BulbOn.jpeg
-    - Banner-Youtube-thumbnail-KH-ReactNative-4.png
+    - assets/BulbOn.jpeg
+    - assets/Banner-Youtube-thumbnail-KH-ReactNative-4.png
   #/images:
 
 
